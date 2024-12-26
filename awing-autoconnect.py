@@ -34,10 +34,10 @@ async def main():
     print('Page redirected')
     try:
         # Wait for the first button to load
-        await page.waitForSelector('#acceptconnection.accept-connection.wa-button.wa-button-logo', visible=True, timeout=60000)
+        await page.waitForSelector('#logo_button.btn btn-primary connect-button w-75', visible=True, timeout=60000)
         print('First button found')
         # Click the first button
-        await page.click('#acceptconnection.accept-connection.wa-button.wa-button-logo')
+        await page.click('#logo_button.btn btn-primary connect-button w-75')
         print('Clicked first button')
     except Exception as e:
         print(f'Error finding or clicking the first button: {e}')
