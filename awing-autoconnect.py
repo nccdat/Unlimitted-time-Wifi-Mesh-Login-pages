@@ -45,10 +45,10 @@ async def main():
     # await page.waitForNavigation()
     try:
         # Wait for the second button to load (the second button is on the same page as the first one, just different layer)
-        await page.waitForSelector('#acceptconnection_BannerOverflow.wa-button.wa-button-maxview.wa-button-maxview-banner', visible=True, timeout=60000)
+        await page.waitForSelector('#connectToInternet.btn mt-2 connect-button text-uppercase', visible=True, timeout=60000)
         print('Second button found')
         # Click the second button
-        await page.click('#acceptconnection_BannerOverflow.wa-button.wa-button-maxview.wa-button-maxview-banner')
+        await page.click('#connectToInternet.btn mt-2 connect-button text-uppercase')
         print('Clicked second button')
     except Exception as e:
         print(f'Error finding or clicking the second button: {e}')
